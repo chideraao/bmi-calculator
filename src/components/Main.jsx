@@ -1,6 +1,7 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 
 function Main() {
+	const [BMI, setBMI] = useState("");
 	/**setting up the hook which handles inputs, best to use reducer as there are multiple inputs */
 	const [userInput, setUserInput] = useReducer(
 		(state, newState) => ({ ...state, ...newState }),
@@ -16,25 +17,10 @@ function Main() {
 	const { weight, height } = userInput;
 
 	/**Calculate the BMI and round to two decimal places */
-	let BMI = null;
 	const calculateBMI = () => {
-		BMI = weight / (height * height);
-		console.log(BMI);
-		return BMI;
-		//let BMIValue = Math.round(calcBMI * 100) / 100;
-		//return BMIValue;
+		let currentBMI = weight / (height * height);
+		setBMI(Math.round(currentBMI * 100) / 100);
 	};
-
-	console.log(BMI);
-
-	/**const calculateBMI = () => {
-		const calcBMI = weight / (height * height);
-		let BMIValue = Math.round(calcBMI * 100) / 100;
-		return BMIValue;
-	};
-
-	const BMI = calculateBMI();
-	console.log(BMI);*/
 
 	return (
 		<div className="container">
