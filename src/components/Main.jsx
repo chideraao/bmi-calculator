@@ -1,7 +1,8 @@
-import React, { useReducer, useState } from "react";
+import React, { useContext, useReducer } from "react";
+import { BMIContext } from "../management/BMIContext";
 
 function Main() {
-	const [BMI, setBMI] = useState("");
+	const [BMI, setBMI] = useContext(BMIContext);
 	/**setting up the hook which handles inputs, best to use reducer as there are multiple inputs */
 	const [userInput, setUserInput] = useReducer(
 		(state, newState) => ({ ...state, ...newState }),
