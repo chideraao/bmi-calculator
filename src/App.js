@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import { BMIProvider } from "./management/BMIContext";
@@ -13,9 +14,10 @@ function App() {
 
 	return (
 		<BMIProvider>
-			<div className="container">
+			<div className="container full">
 				<Header onMetric={onMetric} toggleMetric={toggleMetric} />
 				<Main onMetric={onMetric} />
+				<Footer />
 			</div>
 		</BMIProvider>
 	);

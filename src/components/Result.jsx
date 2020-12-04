@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { BMIContext } from "../management/BMIContext";
 
 function Result() {
-	const [BMI, setBMI] = useContext(BMIContext);
+	const [BMI] = useContext(BMIContext);
 
 	return (
 		<div>

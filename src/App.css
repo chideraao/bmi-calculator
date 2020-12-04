@@ -7,6 +7,12 @@
 	--light-color: #393b44;
 }
 
+body,
+html {
+	height: 100%;
+	display: grid;
+}
+
 * {
 	font-family: "Roboto", sans-serif;
 	color: var(--light-color);
@@ -21,6 +27,10 @@
 	padding: 0 2rem;
 }
 
+.full {
+	margin: auto;
+}
+
 .flex {
 	display: flex;
 }
@@ -33,8 +43,8 @@
 	margin: 2rem;
 }
 
-.px-3 {
-	padding-right: 2rem;
+.p-3 {
+	padding: 10rem;
 }
 
 .btn {
@@ -54,6 +64,13 @@
 .btn:hover {
 	transform: scale(0.96);
 }
+
+input:focus {
+	outline: none;
+	border-radius: 4px;
+	box-shadow: 0px 0px 1px 1px #4484c4;
+}
+
 .toggle-container {
 	width: 70px;
 	background-color: #c4c4c4;
@@ -65,12 +82,6 @@
 	position: relative;
 	margin-bottom: 2rem;
 	margin-right: 1rem;
-}
-
-input:focus {
-	outline: none;
-	border-radius: 4px;
-	box-shadow: 0px 0px 1px 1px #4484c4;
 }
 
 .dialog-button {
@@ -100,4 +111,10 @@ input:focus {
 .disabled {
 	background-color: #5c6e91;
 	left: 34px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 5vh;
+	right: 10vw;
 }

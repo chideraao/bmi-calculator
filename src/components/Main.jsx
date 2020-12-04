@@ -29,9 +29,7 @@ function Main({ onMetric }) {
 
 		let currentBMI = weight / (metricHeight * metricHeight);
 		setBMI(Math.round(currentBMI * 100) / 100);
-		if (isNaN(BMI) || BMI === 0) {
-			return null;
-		}
+
 		setResult(true);
 	};
 
@@ -69,7 +67,7 @@ function Main({ onMetric }) {
 							value={userInput.weight}
 						/>
 					</div>
-					<button className="btn btn-outline" onClick={calculateBMI}>
+					<button className="btn btn-outline m-3" onClick={calculateBMI}>
 						Calculate
 					</button>
 				</>
@@ -93,7 +91,10 @@ function Main({ onMetric }) {
 							value={userInput.weight}
 						/>
 					</div>
-					<button className="btn btn-outline" onClick={calculateEnglishBMI}>
+					<button
+						className="btn btn-outline m-3 "
+						onClick={calculateEnglishBMI}
+					>
 						Calculate
 					</button>
 				</>
